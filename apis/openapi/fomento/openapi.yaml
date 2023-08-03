@@ -1,0 +1,148 @@
+---
+swagger: "2.0"
+info:
+  title: api-fomento
+  version: 1.0.0
+  description: API de fomento da automação
+paths:
+  /api/v1/cadastro-pagamento/solicita-pagamento-parcela: {}
+definitions:
+  clicod:
+    description: ""
+    type: object
+  entradaContratos:
+    title: Root Type for entradaContratos
+    description: ""
+    type: object
+    properties:
+      codigoCliente:
+        type: string
+      idInconsistencia:
+        format: int32
+        type: integer
+      nomeCliente:
+        type: string
+      cpfCnpj:
+        type: string
+      sistema:
+        type: string
+      agenciaCanalAtendimento:
+        type: string
+      agenciaContrato:
+        format: int32
+        type: integer
+      anoContrato:
+        format: int32
+        type: integer
+      sequencialContrato:
+        format: int32
+        type: integer
+      digitoContrato:
+        format: int32
+        type: integer
+      dataParcela:
+        format: date
+        type: string
+      tipoParcela:
+        type: string
+      codigoDespesa:
+        format: int32
+        type: integer
+      sequencialAmortizacao:
+        format: int32
+        type: integer
+      dataPagamento:
+        format: date
+        type: string
+      horaPagamento:
+        type: string
+      dataDebitoContaCorrente:
+        format: date
+        type: string
+      valorParcelaIntegralPagarControper:
+        format: int32
+        type: integer
+      valorDebitoNaContaCorrente:
+        format: int32
+        type: integer
+      agenciaContaCorrenteDebitada:
+        format: int32
+        type: integer
+      numeroContaCorrenteDebitada:
+        format: int32
+        type: integer
+      indicadorDeCanal:
+        format: int32
+        type: integer
+      descricaoDoCanal:
+        type: string
+      correntista:
+        type: string
+      valorMinPagamentoCanal:
+        format: int32
+        type: integer
+      valorMaxPagamentoCanal:
+        format: int32
+        type: integer
+      pagamentoAMaior:
+        type: string
+      codigoAutenticacaoNSU:
+        type: string
+      tipoPagamento:
+        type: string
+      situacaoPagamento:
+        type: string
+    example:
+      codigoCliente: string
+      idInconsistencia: 0
+      nomeCliente: string
+      cpfCnpj: string
+      sistema: string
+      agenciaCanalAtendimento: string
+      agenciaContrato: 0
+      anoContrato: 0
+      sequencialContrato: 0
+      digitoContrato: 0
+      dataParcela: 2023-08-03
+      tipoParcela: string
+      codigoDespesa: 0
+      sequencialAmortizacao: 0
+      dataPagamento: 2023-08-03
+      horaPagamento: string
+      dataDebitoContaCorrente: 2023-08-03
+      valorParcelaIntegralPagarControper: 0
+      valorDebitoNaContaCorrente: 0
+      agenciaContaCorrenteDebitada: 0
+      numeroContaCorrenteDebitada: 0
+      indicadorDeCanal: 0
+      descricaoDoCanal: string
+      correntista: string
+      valorMinPagamentoCanal: 0
+      valorMaxPagamentoCanal: 0
+      pagamentoAMaior: string
+      codigoAutenticacaoNSU: string
+      tipoPagamento: string
+      situacaoPagamento: PAGAMENTO_EFETIVADO
+responses:
+  resposta:
+    description: "[\r\n  {\r\n    \"status\": {\r\n      \"codigo\": 0,\r\n      \"\
+      mensagem\": \"string\"\r\n    },\r\n    \"contratos\": {\r\n      \"agencia\"\
+      : 0,\r\n      \"ano\": 0,\r\n      \"sequencial\": 0,\r\n      \"digito\": 0,\r\
+      \n      \"contrato\": \"string\",\r\n      \"proximaParcela\": \"string\",\r\
+      \n      \"saldo\": 0,\r\n      \"carencia\": true,\r\n      \"vencido\": true\r\
+      \n    }\r\n  }\r\n]"
+    examples:
+      application/json:
+      - status:
+          codigo: 0
+          mensagem: string
+        contratos:
+          agencia: 0
+          ano: 0
+          sequencial: 0
+          digito: 0
+          contrato: string
+          proximaParcela: string
+          saldo: 0
+          carencia: true
+          vencido: true
